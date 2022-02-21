@@ -1,0 +1,20 @@
+<% if @state.present? %>
+  <h1>National Parks in <%= @state %></h1>
+  <ul>
+    <% @parks.each do |park| %>
+      <h2>Park Name: <%= park.name %></h2>
+      <li>Description: <%= park.description %></li>
+      <li>Directions Info: <%= park.directions %></li>
+      <h3>Hours of Operation: </h3>
+      <ul>
+        <li>Monday: <%= park.monday %></li>
+        <li>Tuesday: <%= park.tuesday %></li>
+        <li>Wednesday: <%= park.wednesday %></li>
+        <li>Thursday: <%= park.thursday %></li>
+        <li>Friday: <%= park.friday %></li>
+        <li>Saturday: <%= park.saturday %></li>
+        <li>Sunday: <%= park.sunday %></li>
+      </ul>
+    <% end %>
+  </ul>
+<% end %>
