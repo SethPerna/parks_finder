@@ -1,7 +1,7 @@
 class Park
-  attr_reader :name, :description, :directions, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday
-  def initialize(data)
-    require "pry"; binding.pry
+  attr_reader :name, :description, :directions, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday, :park_count
+  def initialize(data, count)
+    @park_count = count
     @name = data[:fullName]
     @description = data[:description]
     @directions = data[:directionsInfo]

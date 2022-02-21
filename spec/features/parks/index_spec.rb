@@ -18,7 +18,7 @@ RSpec.describe 'parks index' do
         select 'Virginia', from: 'state'
         click_button 'Find Parks'
 
-        expect(page).to have_content('National Parks in VA')
+        expect(page).to have_content('National Parks in VA: 33')
         expect(page).to have_content('Park Name: ')
         expect(page).to have_content('Description: ')
         expect(page).to have_content('Directions Info: ')
