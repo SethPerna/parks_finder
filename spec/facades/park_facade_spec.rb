@@ -2,9 +2,11 @@ require 'rails_helper'
 
 RSpec.describe ParkFacade do
  it ".state_parks", :vcr do
-   park = ParkFacade.state_parks("VA")
+   parks = ParkFacade.state_parks("VA")
 
-   expect(park).to be_a(Array)
-   expect(park.first).to be_a(Park)
+   expect(parks).to be_a(Array)
+   parks.each do |park|
+      expect(park).to be_a Park
+    end
   end
 end
